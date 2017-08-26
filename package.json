@@ -19,6 +19,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "extract:messages": "node node_modules/react-intl-cra/bin/extract-messages.js 'src/**/*.js' 'output/messages.json'"
+    "extract:messages": "node node_modules/react-intl-cra/bin/extract-messages.js 'src/**/*.js' 'output/messages.json'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --no-semi",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.4",
+    "prettier": "^1.5.3"
   }
 }
