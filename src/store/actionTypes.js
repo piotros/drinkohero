@@ -1,2 +1,4 @@
 export const ATTACH_DRINKS = 'ATTACH_DRINKS'
 export const SET_LOADING = 'SET_LOADING'
+export const OPEN_DRAWER = 'OPEN_DRAWER'
+export const CLOSE_DRAWER = 'CLOSE_DRAWER'
