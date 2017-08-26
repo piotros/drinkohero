@@ -8,6 +8,7 @@ import {
   ActionSearch,
   ContentAddCircle
 } from 'material-ui/svg-icons/index'
+import { Link } from 'react-router-dom'
 
 class LeftDrawer extends Component {
   onRequestChange = open => {
@@ -35,6 +36,7 @@ class LeftDrawer extends Component {
           onClick={closeDrawer}
         />
         <MenuItem
+          containerElement={<Link to="/favorites" />}
           primaryText="Ulubione"
           leftIcon={<ActionFavorite />}
           onClick={closeDrawer}
