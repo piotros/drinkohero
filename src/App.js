@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
+import TopBar from "./components/TopBar/TopBar"
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        dupa
+      <div className="app">
+        <TopBar/>
       </div>
     )
   }
