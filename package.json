@@ -6,6 +6,8 @@
     "material-ui": "^0.19.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-intl": "^2.3.0",
+    "react-intl-cra": "^0.2.7",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.11",
@@ -16,6 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "extract:messages": "node node_modules/react-intl-cra/bin/extract-messages.js 'src/**/*.js' 'output/messages.json'"
   }
 }
