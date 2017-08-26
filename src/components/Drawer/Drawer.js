@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import { connect } from 'react-redux'
-import { closeDrawer } from '../../store/data/layout/actions'
+import { closeDrawer, showAddDialog } from '../../store/data/layout/actions'
 import {
   ActionFavorite,
   ActionSearch,
@@ -10,6 +10,11 @@ import {
 } from 'material-ui/svg-icons/index'
 
 class LeftDrawer extends Component {
+  handleAdd = () => {
+    this.props.closeDrawer()
+    this.props.showAddDialog()
+  }
+
   render() {
     const { isDrawerOpened, closeDrawer } = this.props
 
@@ -23,7 +28,7 @@ class LeftDrawer extends Component {
         <MenuItem
           primaryText="Dodaj"
           leftIcon={<ContentAddCircle />}
-          onClick={closeDrawer}
+          onClick={this.handleAdd}
         />
         <MenuItem
           primaryText="Wyszukaj"
@@ -47,7 +52,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-  closeDrawer
+  closeDrawer,
+  showAddDialog
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(LeftDrawer)
