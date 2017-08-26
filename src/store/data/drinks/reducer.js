@@ -7,9 +7,9 @@ const defaultState = {
   loading: false
 }
 
-const blogReducer = handleActions({
+const drinksReducer = handleActions({
   [SET_LOADING]: (state, {payload}) => ({...state, loading: payload}),
   [ATTACH_DRINKS]: (state, {payload}) => ({...state, list: payload})
 }, defaultState)
 
-export default blogReducer
+export default drinksReducer
