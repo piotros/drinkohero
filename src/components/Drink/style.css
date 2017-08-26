@@ -1,0 +1,12 @@
+.drink-container {
+    padding: 15px;
+    text-align: left;
+}
+
+.drink-container h3 {
+    margin: 0;
+}
+
+.drink-container p {
+    margin: 5px 0;
+}
