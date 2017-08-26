@@ -18,7 +18,7 @@ class App extends Component {
           <Route exact path="/" render={() => <Redirect to="/list" />} />
           <Route exact strict path="/list" component={DrinkList} />
           <Route exact strict path="/favorites" component={Favorites} />
-          <Route exact strict path="/details" component={DrinkDetails} />
+          <Route exact strict path="/details/:id" component={DrinkDetails} />
         </div>
       </Router>
     )

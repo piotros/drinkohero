@@ -20,7 +20,11 @@ class Drinks extends Component {
           {data
             ? data.map(drink =>
                 <ListItem key={drink._id}>
-                  <Link className="link" to="/details">
+                  <Link
+                    key={drink._id}
+                    className="link"
+                    to={`/details/${drink._id}`}
+                  >
                     <Drink drink={drink} />
                   </Link>
                 </ListItem>
